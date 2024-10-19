@@ -60,10 +60,11 @@ public class EmployeeRepository implements Repository<Employee>{
             myStamt.setString(3, employee.getMa_surname());
             myStamt.setString(4, employee.getEmail());
             myStamt.setDouble(5, employee.getSalary());
+            myStamt.setString(6, employee.getCurp());
             if(employee.getId() != null && employee.getId()>0){
-                myStamt.setInt(6, employee.getId());
+                myStamt.setInt(7, employee.getId());
             }
-            myStamt.setString(7, employee.getCurp());
+
             myStamt.executeUpdate();
         }
     }
